@@ -1,7 +1,10 @@
 // ignore_for_file: must_be_immutable
 
+import 'dart:io';
+
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/svg.dart';
 
 class CustomImageView extends StatelessWidget {
   ///[imagePath] is required parameter for showing image
@@ -111,6 +114,26 @@ class CustomImageView extends StatelessWidget {
               color: Colors.deepPurple,
               child: const Icon(Icons.error, color: Colors.white),
             ),
+          );
+        case ImageType.svg:
+          return SizedBox(
+            height: height,
+            width: width,
+            child: SvgPicture.asset(
+              imagePath!,
+              height: height,
+              width: width,
+              fit: fit!,
+              color: color,
+            ),
+          );
+        case ImageType.file:
+          return Image.file(
+            File(imagePath!),
+            height: height,
+            width: width,
+            fit: fit!,
+            color: color,
           );
         case ImageType.png:
         default:

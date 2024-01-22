@@ -10,3 +10,5 @@ class GetUsersDone extends HomeState {}
 
 class SelectUser extends HomeState {}
 class DeselectUser extends HomeState {}
+
+class SearchUsers extends HomeState {}
