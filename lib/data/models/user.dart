@@ -137,4 +137,14 @@ class User {
     return map;
   }
 
+  /// this makes sure when comparing two User values
+  /// that you get the right result based on the id
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) || (other is User && runtimeType == other.runtimeType && id == other.id);
+  }
+
+  @override
+  int get hashCode => id.hashCode;
+
 }

@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:sigma_tech_task/core/helper/index.dart';
 import 'package:sigma_tech_task/splash.dart';
 
-import 'core/helper/glow_remover.dart';
 import 'core/utils/navigator.dart';
+import 'presentation/helper/glow_remover.dart';
+import 'presentation/helper/screen_util_init.dart';
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});

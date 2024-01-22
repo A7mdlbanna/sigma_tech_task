@@ -7,3 +7,6 @@ class HomeInitial extends HomeState {}
 
 class GetUsersLoading extends HomeState {}
 class GetUsersDone extends HomeState {}
+
+class SelectUser extends HomeState {}
+class DeselectUser extends HomeState {}

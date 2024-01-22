@@ -2,7 +2,8 @@ import 'package:bloc/bloc.dart';
 import 'package:meta/meta.dart';
 import 'package:sigma_tech_task/data/repositories/users_repository.dart';
 
-import '../../data/models/user.dart';
+import '../../../../data/models/user.dart';
+
 
 part 'home_state.dart';
 
@@ -24,5 +25,16 @@ class HomeCubit extends Cubit<HomeState> {
   loadMoreUsers(){
     limit += 10;
     getUsers();
+  }
+
+  List<User> selectedUsers = [];
+  selectUser(User user){
+    selectedUsers.add(user);
+    emit(SelectUser());
+  }
+
+  deselectUser(User user){
+    selectedUsers.remove(user);
+    emit(DeselectUser());
   }
 }

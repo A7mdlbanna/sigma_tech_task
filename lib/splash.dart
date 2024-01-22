@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:lottie/lottie.dart';
 
-import 'core/resources/app_images.dart';
+import 'presentation/resources/app_images.dart';
 import 'core/utils/navigator.dart';
-import 'presentation/pages/home_screen.dart';
+import 'presentation/pages/home/home_screen.dart';
 
 class SplashScreen extends StatefulWidget {
   const SplashScreen({super.key});
